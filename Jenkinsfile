@@ -19,13 +19,13 @@ pipeline {
                     branch 'master'
                     branch 'main'
                 }
+            }
             steps {
                 // sh 'echo $USER > test.txt'
                 sh 'echo "in master or main branch"'
                 sh 'cat testfile.yml'
             }
 
-            }
         }
         stage('Dev branch') {
             when {
