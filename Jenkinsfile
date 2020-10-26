@@ -69,10 +69,12 @@ pipeline {
         stage('Feature branch') {
             when {
                 not {
-                    branch 'master'
-                    branch 'main'
-                    branch 'dev'
-                    branch 'devel'
+                    anyOf {
+                        branch 'master'
+                        branch 'main'
+                        branch 'dev'
+                        branch 'devel'
+                    }
                 }
             }
             environment {
