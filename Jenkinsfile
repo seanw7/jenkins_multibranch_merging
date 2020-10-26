@@ -39,6 +39,7 @@ pipeline {
             }
             steps {
                 sh 'echo "in dev, or devel branch"'
+                sh 'echo "CRAZY TEST PR"'
                 // dir ('ansible'){
                 //     sh ''
                 // }
