@@ -39,6 +39,7 @@ pipeline {
             }
             steps {
                 sh 'echo "in dev, or devel branch"'
+                sh 'echo "CRAZY TEST PR"'
                 // dir ('ansible'){
                 //     sh ''
                 // }
@@ -55,7 +56,7 @@ pipeline {
             post {
                 success {
                     dir (''){
-                        sh '''echo 'build was successful in ${BRANCH_NAME}'''
+                        sh '''echo "build was successful in ${BRANCH_NAME}"'''
                     }
                 }
                 // always {
