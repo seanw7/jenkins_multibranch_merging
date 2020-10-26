@@ -56,7 +56,7 @@ pipeline {
             post {
                 success {
                     dir (''){
-                        sh '''echo 'build was successful in ${BRANCH_NAME}'''
+                        sh '''echo "build was successful in ${BRANCH_NAME}"'''
                     }
                 }
                 // always {
