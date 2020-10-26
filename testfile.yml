@@ -1,0 +1,12 @@
+---
+- name: Test playbook
+  hosts: all
+  gather_facts: false
+
+  vars:
+    testvar: 1
+
+  tasks:
+    - name: Print testvar
+      debug:
+        var: testvar
